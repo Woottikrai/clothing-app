@@ -15,7 +15,7 @@ const AddProduct = () => {
     return (
       <div className="grid justify-center">
         <div>CreateUser</div>
-
+       <div>cant Shot this page</div>
       </div>
     )
  
