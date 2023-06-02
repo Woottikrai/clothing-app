@@ -1,25 +1,14 @@
 export type SiderTheme = "light" | "dark";
 import type { MenuProps } from "antd";
 import { Row, Col, Space, Avatar, Dropdown, Typography } from "antd";
-
+import logo from '../../assets/img/logoclothing.jpg'
 import { defaultLayout } from "../../routes/defaultRoutes";
 type MenuItem = Required<MenuProps>["items"][number];
 
-import {
-  DashboardOutlined,
-  DashboardFilled,
-  UserOutlined,
-  UpSquareFilled,
-  CaretDownOutlined,
-  CalendarOutlined,
-  CalendarFilled,
-  SettingOutlined,
-  SettingFilled,
-} from "@ant-design/icons";
+
 import { Layout, Menu, theme } from "antd";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-import { IItem } from "./sidebar-interface";
 
 const { Sider } = Layout;
 type Props = {
@@ -41,10 +30,10 @@ export default function AppSidebar({ trigger, collapsed, setTheme }: Props) {
   const navigate = useNavigate();
 
   const sidebarMenu: Array<MenuItem> = [
-    getItem("Dashboard", 1, <DashboardOutlined />),
-    getItem("Adproduct", 2, <UserOutlined />),
-    getItem("Calendar", 3, <CalendarOutlined />),
-    getItem("Setting", 4, <SettingOutlined />),
+
+    getItem("Adproduct", 1,),
+    getItem("Listroduct", 2)
+
   ];
 
   const handleMenu: MenuProps["onClick"] = (e) => {
@@ -84,17 +73,18 @@ export default function AppSidebar({ trigger, collapsed, setTheme }: Props) {
       }}
       className="!transition-all !ease-linear !delay-75"
     >
-      {/* <Row
+      <Row
         className="logo center"
-        align="middle"
+        align="stretch"
         style={collapsed ? { opacity: 0 } : {}}
       >
         <img
-          src={calendar}
+          src={logo}
           alt="image-logo"
-          className="object-fill h-14 w-14 "
+          className="object-fill h-32 w-32 "
+
         />
-      </Row> */}
+      </Row>
       <Menu
         theme={setTheme}
         mode="inline"

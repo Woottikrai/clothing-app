@@ -4,7 +4,7 @@ import NoLayout from "../views/layouts/noLayout";
 import Signin from "../views/auth/sigin";
 import Error404 from "../views/error/error404";
 import Error500 from "../views/error/error500";
-import AddProduct from "../views/add-product";
+import AddProduct from "../views/product/addProduct";
 export const routerDefault: Array<RouteObject> = [
   {
     path: "/error",
@@ -20,10 +20,11 @@ export const routerDefault: Array<RouteObject> = [
 ];
 
 
-  export const addProduct = [
-   
-    {path: "/addproduct", element: <AddProduct />, key: 2},
-  
+export const addProduct = [
+
+  { path: "/addproduct", element: <AddProduct />, key: 1 },
+  { path: "/listProduct", element: <AddProduct />, key: 2 },
+
 ]
 
 export const defaultLayout = {
