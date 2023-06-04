@@ -5,6 +5,8 @@ import Signin from "../views/auth/sigin";
 import Error404 from "../views/error/error404";
 import Error500 from "../views/error/error500";
 import AddProduct from "../views/product/addProduct";
+import ListProduct from "../views/product/listProduct";
+
 export const routerDefault: Array<RouteObject> = [
   {
     path: "/error",
@@ -23,7 +25,7 @@ export const routerDefault: Array<RouteObject> = [
 export const addProduct = [
 
   { path: "/addproduct", element: <AddProduct />, key: 1 },
-  { path: "/listProduct", element: <AddProduct />, key: 2 },
+  { path: "/listProduct", element: <ListProduct />, key: 2 },
 
 ]
 

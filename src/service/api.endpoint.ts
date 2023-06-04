@@ -8,6 +8,14 @@ export const endpoints = {
     getColorAll: `${projectConfig.baseURL}/color-all`,
     getProducrtAll: `${projectConfig.baseURL}/find-all`,
     addProduct: `${projectConfig.baseURL}/add-product`,
+    getProductAll: `${projectConfig.baseURL}/find-all`,
+  },
+
+  user: {
+    login: `${projectConfig.baseURL}/authentication/siginin`,
+    register: `${projectConfig.baseURL}/user/register`,
+    updateUser: `${projectConfig.baseURL}/user/update:id`,
+    updatePssword: `${projectConfig.baseURL}/user/update-password`,
   },
 };
 

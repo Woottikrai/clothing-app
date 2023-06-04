@@ -3,7 +3,7 @@ import { Layout } from "antd";
 // import AppSidebar from "../../components/sidebar";
 // import AppHeader from "../../components/header";
 // import AppContent from "../../components/content";
-
+import Header from '../../views/header/header'
 import { Outlet } from "react-router-dom";
 import AppSidebar from "../../components/sidebar";
 import AppContent from "../../components/content";
@@ -25,7 +25,7 @@ export default function DefaultLayout({ }: Props) {
         style={collapsed ? { marginLeft: 75 } : { marginLeft: 250 }}
         className="!transition-all !ease-linear !delay-75"
       >
-
+        <Header></Header>
         <AppContent>
           <Outlet />
         </AppContent>
