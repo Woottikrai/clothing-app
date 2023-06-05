@@ -16,20 +16,17 @@ export default function ProductCard(product: IProduct) {
         setIsModalVisible(false);
     };
 
-
-
     return (
         <div>
             <Card
                 cover={<img alt={product.name} src={product.img} />}
                 title={product.name}
-                style={{ width: 300 }}
+                style={{ width: 200 }}
                 onClick={showModal}
             >
                 <p>{product.producttype?.producttype_name}</p>
                 <p>{product.detail}</p>
                 <p>ราคา: {product.price} บาท</p>
-
             </Card>
 
             <Modal
@@ -46,5 +43,4 @@ export default function ProductCard(product: IProduct) {
             </Modal>
         </div>
     );
-
-}   
+}

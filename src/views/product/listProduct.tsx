@@ -30,19 +30,21 @@ export default function ListProduct({ }: Props) {
     };
 
     return (
-        <div>
+        <div >
 
-            <div className="card-container">
-                {getProductAll?.data.map((product: IProduct) => (
-                    <ProductCard key={product.id} img={product.img}
+            {getProductAll?.data.map((product: IProduct) => (
+                <div key={product.id} style={{ margin: "15px 15px 15px 15px", }}>
+                    <ProductCard
+                        img={product.img}
                         price={product.price}
                         size={product.size}
                         producttype={product.producttype}
                         color={product.color}
                         suitability={product.suitability}
+
                     />
-                ))}
-            </div>
+                </div>
+            ))}
         </div>
     );
 

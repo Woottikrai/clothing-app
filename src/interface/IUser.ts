@@ -28,16 +28,16 @@ export interface ISignin {
 }
 
 export interface IProfile {
-  id: number;
-  name: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-  img: string;
-  tel: string;
-  roleId: number;
-  createAt: string;
-  deleteAt: null;
-  UpdateAt: string;
+  id?: number;
+  name?: string;
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  password?: string;
+  img?: string;
+  tel?: string;
+  roleId?: number;
+  createAt?: string;
+  deleteAt?: null;
+  UpdateAt?: string;
 }

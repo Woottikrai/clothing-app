@@ -15,11 +15,16 @@ export async function register(params?: Partial<IUser>) {
   return !statusSuccess.includes(res.status) ? throwResponse(res) : res.data;
 }
 
+export async function getProfile() {
+  const res = await axios.get(`${endpoints.user.profile}`);
+  return !statusSuccess.includes(res.status) ? throwResponse(res) : res.data;
+}
+
 export const UseGetProfile = (): UseQueryResult<IProfile, Error> => {
   return useQuery([
     "get-profile",
     async () => {
-      const res = await axios.get(`${endpoints.user.login}`);
+      const res = await axios.get(`${endpoints.user.profile}`);
       return !statusSuccess.includes(res.status)
         ? throwResponse(res)
         : res.data;
@@ -30,6 +35,7 @@ export const UseGetProfile = (): UseQueryResult<IProfile, Error> => {
 export const authenApi = {
   signin,
   register,
+  getProfile,
   UseGetProfile,
 };
 
